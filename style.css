@@ -111,10 +111,6 @@ input.btn-check[type=checkbox]:checked + label{
     background-color: #007b4eCC;
 }
 
-.btn-custom {
-    height: 50px;
-}
-
 .form-check-input[type='checkbox']:checked + .form-check-label:before {
     border-right: 2px solid #007b4e;
     border-bottom: 2px solid #007b4e;
