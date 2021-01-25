@@ -6,15 +6,13 @@
   <link rel="stylesheet" href="bootstrap.min.css"/>
   <link rel="stylesheet" href="mdb.min.css"/>
   <link rel="stylesheet" href="style.css"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="container col text-center bg-white">
-      <H1>Arbetsmiljöfrågor</H1>
-    </div>
 
-    <!-- Navbar and content -->
+  <!-- Navbar and content -->
     <div class="container-fluid bg-white">
       <div class="row">
 
@@ -109,8 +107,29 @@
           </div>
         </div>
 
-        <!-- Rutor för arbetsmiljöplanen -->
+        <!-- Utskriftsrutan -->
         <div class="col-6" id="main">
+          <!-- Header -->
+          <div class="container col bg-white d-flex align-items-center">
+
+              <div class="col imgUp">
+                <div class="imagePreview"></div>
+                <label class="btn btn-custom2 d-print-none">Ladda upp logotyp<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                </label>
+              </div>
+
+              <div class="col-6 text-center">
+                <H1>Arbetsmiljöfrågor</H1>
+              </div>
+
+              <div class="col imgUp">
+                <div class="imagePreview"></div>
+                <label class="btn btn-custom2 d-print-none">Ladda upp logotyp<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                </label>
+              </div>
+          </div>
+
+          <!-- Rutor för arbetsmiljöplanen -->
           <h2>Arbetsmiljöplan</h2>
             <table class="table table-bordered">
               <thead>
@@ -2946,11 +2965,13 @@
           </div>
         </div>
 
+        <!-- Logotyp i sidan 
         <div class="col-3" id="logo">
           <div class="sticky-top">
             <img src="pagen.png" class="img-fluid">
           </div>
         </div>
+        -->
 
       </div>
     </div>
@@ -2990,4 +3011,26 @@
 
      document.body.innerHTML = originalContents;
   }
+</script>
+
+<script>
+$(function() {
+    $(document).on("change",".uploadFile", function()
+    {
+    		var uploadFile = $(this);
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+ 
+        if (/^image/.test( files[0].type)){ // only image file
+            var reader = new FileReader(); // instance of the FileReader
+            reader.readAsDataURL(files[0]); // read the local file
+ 
+            reader.onloadend = function(){ // set image data as background of div
+                //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
+uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url("+this.result+")");
+            }
+        }
+      
+    });
+});
 </script>
