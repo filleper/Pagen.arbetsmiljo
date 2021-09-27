@@ -101,13 +101,28 @@
                     <input type="checkbox" class="btn-check" id="risk16" autocomplete="off" onclick="myFunction(this.id)">
                     <label class="btn btn-custom col" for="risk16">16. Eventuell ytterligare risk</label>
                   </div>
+
+                  <div class="btn-group-toggle" data-toggle="buttons">
+                    <input type="checkbox" class="btn-check" id="risk17" autocomplete="off" onclick="myFunction(this.id)">
+                    <label class="btn btn-custom col" for="risk17">17. ATEX-direktiven</label>
+                  </div>
+
+                  <div class="btn-group-toggle" data-toggle="buttons">
+                    <input type="checkbox" class="btn-check" id="risk18" autocomplete="off" onclick="myFunction(this.id)">
+                    <label class="btn btn-custom col" for="risk18">18. Arbetstillstånd</label>
+                  </div>
+
+                  <div class="btn-group-toggle" data-toggle="buttons">
+                    <input type="checkbox" class="btn-check" id="risk19" autocomplete="off" onclick="myFunction(this.id)">
+                    <label class="btn btn-custom col" for="risk19">19. Utrymningsinstruktion Malmö</label>
+                  </div>
               </div>
 
           </div>
         </div>
 
         <!-- Utskriftsrutan -->
-        <div class="col-6" id="main">
+        <div class="col-6 main container" id="main">
           <!-- Header -->
 
           <div class="container col bg-white d-flex align-items-center">
@@ -117,7 +132,7 @@
               </div>
 
               <div class="col-6 text-center">
-                <H1>Arbetsmiljöfrågor</H1>
+                <H1>Arbetsmiljöplan</H1>
               </div>
           </div>
 
@@ -133,7 +148,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="Projektnamn"></td>
-                  <td class="col-8"><input type="text" id="A" placeholder="Beskrivning av projektet samt entreprenadfrom"></td>
+                  <td class="col-8"><input type="text" id="A" placeholder="Beskrivning av projektet samt entreprenadform"></td>
                 </tr>
               </tbody>
 
@@ -271,7 +286,7 @@
                 <tr class="d-flex">
                   <th class="col-2">Datum</th>
                   <th class="col-4">Komplettering/ändring av planen</th>
-                  <th class="col-3">Ev. ny utsedd BAS-P <br> Företag eller handläggare</th>
+                  <th class="col-3">Ev. ny utsedd BAS-U <br> Företag eller handläggare</th>
                   <th class="col-3">Signatur BAS-P</th>
                 </tr>
               </thead>
@@ -797,8 +812,11 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck27">
                   <label class="form-check-label" for="defaultCheck27">
-                    <p>Vald skyddsanordning är <input type="text" placeholder="ANGE SKYDDSANORDNING" style="width: 500px;"></p>
+                    <p>Vald skyddsanordning är angivna nedan.</p>
                   </label>
+                  <div class="form-group">
+                    <textarea class="form-control col" rows="3" placeholder="Ange skyddsanordning" style="font-size: 9pt;"></textarea>
+                  </div>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck28">
@@ -972,9 +990,14 @@
             <div class="card">
               <div class="card-body border rounded">
                 <h3>Arbete - metoder och utrustning</h3>
-                <p>Följande person har utsetts till schaktansvarig <input type="text" placeholder="Namn" style="width: 150px;"> och nås på <input type="text" placeholder="Telefonnummer" style="width: 100px;"><br>
-                  Vid rasrisk ska anordning för avspärrning vara tydligt och varaktigt märkt.<br>
-                  Kant, stup eller annan nivåskillnad där risk finns för att fordon, personal eller tredje person kan falla ned ska vara försedd med skyddsanordning eller avspärrning.</p>
+                <p>Följande person, med kontaktuppgifter som anges nedan, har utsetts till schaktansvarig.</p>
+                  <div class="input-group" style="margin-top: -9px; margin-bottom: 5px;">
+                    <input type="text" class="form-control col-4" placeholder="Ange företagets namn">
+                    <input type="text" class="form-control col-8" placeholder="Ange namn och telefonnummer till företagets kontaktperson på arbetsplatsen">
+                  </div>
+                <p>Vid rasrisk ska anordning för avspärrning vara tydligt och varaktigt märkt.<br>
+                Kant, stup eller annan nivåskillnad där risk finns för att fordon, personal eller tredje person kan falla ned ska vara försedd med skyddsanordning eller avspärrning.</p>
+
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck41">
                   <label class="form-check-label" for="defaultCheck41">
@@ -1326,7 +1349,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
-                  <td class="col-8 h-auto"><input type="text" id="A" placeholder="Tillexempel ?????????????????????????????????????"></td>
+                  <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1987:2, AFS 1999:3 samt Arbetsmiljöverkets informationssida på internet.</em></td>
@@ -1417,7 +1440,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
-                  <td class="col-8 h-auto"><input type="text" id="A" placeholder="Tillexempel ?????????????????????????????????????"></td>
+                  <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3 samt Arbetsmiljöverkets informationssida på internet.</em></td>
@@ -1549,7 +1572,7 @@
 
           </div>
 
-          <!-- Risk 6-->
+          <!-- Risk 6 -->
           <div class="container bg-white child" id="risk6_text" style="display:none;">
             <h2>6. Åtgärder vid arbete med risk för drunkning</h2>
 
@@ -1563,7 +1586,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
-                  <td class="col-8 h-auto"><input type="text" id="A" placeholder="Tillexempel ?????????????????????????????????????"></td>
+                  <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3, AFS 2010:16 samt Arbetsmiljöverkets informationssida.</em></td>
@@ -1604,15 +1627,21 @@
             <div class="card">
               <div class="card-body border rounded">
                 <h3>Förberedande åtgärder; produktionsmetoder och material</h3>
-                <p>Schakt eller öppningar i mark, fasad och bjälklag, etc. spärras av med skyddsräcke. <input type="text" placeholder="Ange fabrikat" style="width: 250px;"><br>
-                  Flytväst är obligatorisk vid arbete på, ovanför eller i anslutning till vatten.<br>
+                <p>Schakt eller öppningar i mark, fasad och bjälklag, etc. spärras av med skyddsräcke. </p>
+                  <div class="form-group" style="margin-top: -9px; margin-bottom: 5px;">
+                    <textarea class="form-control col" rows="1" placeholder="Ange fabrikat" style="font-size: 9pt;"></textarea>
+                  </div>
+                  <p>Flytväst är obligatorisk vid arbete på, ovanför eller i anslutning till vatten.<br>
                   Räddningsutrustning finns på arbetsplatsen.<br>
-                  Skyddsnät, nedfallskärmar eller andra åtgärder mot ras eller fall har vidtagits. <input type="text" placeholder="Ange fabrikat" style="width: 250px;"><br>
-                  Anordningar för säker nedstigning i och uppstigning ur vattnet finns vid arbetsplatsen.</p>
+                  Skyddsnät, nedfallskärmar eller andra åtgärder mot ras eller fall har vidtagits.</p>
+                  <div class="form-group" style="margin-top: -9px; margin-bottom: 5px;">
+                    <textarea class="form-control col" rows="1" placeholder="Ange fabrikat" style="font-size: 9pt;"></textarea>
+                  </div>
+                  <p>Anordningar för säker nedstigning i och uppstigning ur vattnet finns vid arbetsplatsen.</p>
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck90">
                   <label class="form-check-label" for="defaultCheck90">
-                    <p>Halkförebyggande åtgärder har vidtagits.</p>
+                    <p>Halkförebyggande åtgärder har vidtagits och anges nedan.</p>
                   </label>
                   <div class="form-group">
                     <textarea class="form-control col" rows="1" placeholder="Ange åtgärder" style="font-size: 9pt;"></textarea>
@@ -1621,10 +1650,10 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck91">
                   <label class="form-check-label" for="defaultCheck91">
-                    <p>Arbete vintertid kräver specifik utrustning.</p>
+                    <p>Arbete vintertid kräver specifik utrustning som angivits nedan.</p>
                   </label>
                   <div class="form-group">
-                    <textarea class="form-control col" rows="1" placeholder="Ange åtgärder" style="font-size: 9pt;"></textarea>
+                    <textarea class="form-control col" rows="1" placeholder="Ange specifik utrustning" style="font-size: 9pt;"></textarea>
                   </div>
                 </div>
                 <div class="form-check">
@@ -1677,7 +1706,7 @@
 
           </div>
 
-          <!-- Risk 7-->
+          <!-- Risk 7 -->
           <div class="container bg-white child" id="risk7_text" style="display:none;">
             <h2>7. Åtgärder vid arbete i brunnar eller tunnlar samt anläggningsarbete under jord</h2>
 
@@ -1878,7 +1907,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
-                  <td class="col-8 h-auto"><input type="text" id="A" placeholder="Tillexempel ?????????????????????????????????????"></td>
+                  <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3, AFS 2010:16 samt Arbetsmiljöverkets informationssida.</em></td>
@@ -1988,7 +2017,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
-                  <td class="col-8 h-auto"><input type="text" id="A" placeholder="Tillexempel ?????????????????????????????????????"></td>
+                  <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3 samt Arbetsmiljöverkets informationssida på internet.</em></td>
@@ -2860,7 +2889,7 @@
 
           </div>
 
-          <!-- Risk 15-->
+          <!-- Risk 15 -->
           <div class="container bg-white child" id="risk15_text" style="display:none;">
             <h2>15. Eventuell ytterligare risk</h2>
 
@@ -2874,7 +2903,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
-                  <td class="col-8 h-auto"><input type="text" id="A" placeholder="Exempel: ?????????????????????????????????????"></td>
+                  <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3.</em></td>
@@ -2908,7 +2937,7 @@
 
           </div>
 
-          <!-- Risk 16-->
+          <!-- Risk 16 -->
           <div class="container bg-white child" id="risk16_text" style="display:none;">
             <h2>16. Eventuell ytterligare risk</h2>
             
@@ -2922,7 +2951,7 @@
               <tbody>
                 <tr class="d-flex">
                   <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
-                  <td class="col-8 h-auto"><input type="text" id="A" placeholder="Exempel: ?????????????????????????????????????"></td>
+                  <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3.</em></td>
@@ -2955,24 +2984,232 @@
             </table>
 
           </div>
-        </div>
+        
 
-        <!-- Logotyp i sidan 
+                    <!-- Risk 17 Pågen -->
+                    <div class="container bg-white child" id="risk17_text" style="display:none;">
+                      <h2>17. ATEX-direktiven</h2>
+          
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr class="d-flex">
+                            <th class="col-4">Företag</th>
+                            <th class="col-8">Arbete/aktivitet och risk(-er); Ange vad och var</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="d-flex">
+                            <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
+                            <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
+                          </tr>
+                          <tr class="d-flex">
+                            <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3, AFS 2010:16 samt Arbetsmiljöverkets informationssida.</em></td>
+                          </tr>
+                        </tbody>
+                      </table>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <h3>Atex-direktiven är en del av EU:s lagverk och styr kraven på utrustning och arbete i explosionsfarlig miljö. De styrande direktiven är:</h3>
+                          <p>
+                            <li><b>ATEX-direktiv 94/9/EG  även kallat (ATEX 95/100a). 
+                              Utrustning och säkerhetssystem avsedda för användning i explosionsfarliga omgivningar.</b><br>
+                              Detta direktiv styr kraven på utrustningar i explosionsfarlig miljö och är till största del riktat mot tillverkare av utrustning. Det är emellertid viktigt även för brukare att känna till vissa delar av direktivet. En kort beskrivning göres under flik 2. I svensk lagstiftning är direktivet implementerat i arbetsmiljöverkets förekrift AFS 1995:5 och elsäkerhetsverkets föreskrift ELSÄK-FS 1995:6.  AFS 1995:5 finns under denna flik.<br>
+                              <a href="http://av.se/lagochratt/afs/afs1995_05.aspx">Länk till AFS 1995:5</a>
+                            </li>
+                            <br>
+                            <li><b>ATEX-direktiv 1999/92/EG även kallat (ATEX 137)
+                              Minimikrav för att förbättra skyddet för arbetstagares säkerhet och hälsa vid risk från explosiva atmosfärer.</b><br>
+                              Detta direktiv riktar sig mest mot brukarna, dvs. de anläggningsägare som i sin verksamhet har möjlig explosiv miljö. Det är i detta direktiv kraven ställs på zonklassning och vilka krav som skall ställas för arbete i explosiv miljö. I svensk lagstiftning regleras direktivet främst av arbetsmiljöverkets föreskrift AFS 2003:3 och räddningsverkets föreskrift SRVFS 2004:7. Båda föreskrifterna finns under denna flik.<br>
+                              <a href="http://av.se/lagochratt/afs/afs2003_03.aspx">Länk till AFS 2003:3</a><br>
+                              <a href="https://www.msb.se/externdata/rs/5a42742e-7310-4a17-aea2-7ca7bc821161.pdf">Länk till SRVFS 2004:7</a>
+                            </li>
+                          </p>
+                        </div>
+                      </div>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <h3 class="card-title">Övriga åtgärder</h3>
+                          <div class="form-group">
+                            <textarea class="form-control col" rows="3" placeholder="Ange åtgärder" style="font-size: 9pt;"></textarea>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr class="d-flex">
+                            <th class="col-6">Arbeten med ovanstående risker slutförda den:</th>
+                            <th class="col-6">Signering BAS-U</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="d-flex">
+                            <td class="col-6"><input type="date" id="A"></td>
+                            <td class="col-6"><input type="text" id="A"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+          
+                    </div>
+
+                    <!-- Risk 18 -->
+                    <div class="container bg-white child" id="risk18_text" style="display:none;">
+                      <h2>18. Arbetstillstånd</h2>
+          
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr class="d-flex">
+                            <th class="col-4">Företag</th>
+                            <th class="col-8">Arbete/aktivitet och risk(-er); Ange vad och var</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="d-flex">
+                            <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
+                            <td class="col-8 h-auto"><input type="text" id="A" placeholder="Exempel: Risk att begravas under jordmassor, sjunka ned i lös mark, eller drunkna. Risk för otillräcklig ventilation för t ex avgaser, läckage gas och/eller brist syre. Risk för högt lufttryck."></td>
+                          </tr>
+                          <tr class="d-flex">
+                            <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3, AFS 2010:1, AFS 2011:18 samt Arbetsmiljöverkets informationssida på internet.</em></td>
+                          </tr>
+                        </tbody>
+                      </table>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <h3>Arbetstillstånd</h3>
+                          <p><li>Arbetstillstånd skall utfärdas för allt arbete i ATEX-klassat område, samt för alla ingrepp i utrustning som är zonklassade enligt ATEX.</li>
+                            
+                            <li>Beslut om arbetstillstånd krävs eller ej avgörs av produktionsansvarig.</li>
+                            
+                            <li>Arbetstillstånd utfärdas av tillståndsansvarig för heta arbeten på blankett  ”Arbetstillstånd”. Blanketten ska numreras löpande och efter avslutat arbete arkiveras tillsammans med eventuella tillstånd för heta arbeten. Förutom allmänna data om objektet och arbetsbeskrivning, skall ett antal förebyggande skyddsfunktioner beslutas och signeras efter åtgärd.</li> 
+                            
+                            <li>Innan återstart, efter arbetet är klart, skall kontroll göras att arbetsplatsen är återställd. Efter signering av tillståndsansvarig för heta arbeten kan driften återupptas.</li>
+                            </p>
+                        </div>
+                      </div>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <h3>Säkring av arbetsplatsen</h3>
+                          <p>Det finns ett antal viktiga moment som skall åtgärdas innan tillträde till objektet får ges. Beroende på arbetsuppgiften kan det vara allt ifrån enbart låst arbetsbrytare till att objektet är avblindat och rengjort.
+                             För alla aktuella moment skall ansvarig utses som signerar när arbetet är utfört. Efter arbetet är klart skall även signering ske att de olika momenten är återställda till driftläge.</p>
+                        </div>
+                      </div>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <h3>Skyddsutrustning</h3>
+                          <p>Den som utfärdar arbetstillståndet skall bedöma vilken personlig skyddsutrustning och annan skyddsutrustning som krävs för arbetets utförande.</p>
+                        </div>
+                      </div>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <h3>Tillstånd för heta arbeten</h3>
+                          <p>Utfärdas enligt särskild rutin ID- nummer 2131.</p>
+                        </div>
+                      </div>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <h3 class="card-title">Övriga åtgärder</h3>
+                          <div class="form-group">
+                            <textarea class="form-control col" rows="3" placeholder="Ange åtgärder" style="font-size: 9pt;"></textarea>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr class="d-flex">
+                            <th class="col-6">Arbeten med ovanstående risker slutförda den:</th>
+                            <th class="col-6">Signering BAS-U</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="d-flex">
+                            <td class="col-6"><input type="date" id="A"></td>
+                            <td class="col-6"><input type="text" id="A"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+          
+                    </div>
+
+                    <!-- Risk 19 -->
+                    <div class="container bg-white child" id="risk19_text" style="display:none;">
+                      <h2>19. Utrymningsinstruktion Malmö</h2>
+                      
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr class="d-flex">
+                            <th class="col-4">Företag</th>
+                            <th class="col-8">Arbete/aktivitet och risk(-er); Ange vad och var</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="d-flex">
+                            <td class="col-4"><input type="text" id="A" placeholder="EX: Pågen AB"></td>
+                            <td class="col-8 h-auto"><input type="text" id="A" placeholder=" "></td>
+                          </tr>
+                          <tr class="d-flex">
+                            <td class="col" id="Åtgärd"><strong>Åtgärder</strong> <em>Se även AFS 1999:3.</em></td>
+                          </tr>
+                        </tbody>
+                      </table>
+          
+                      <div class="card">
+                        <div class="card-body border rounded">
+                          <img src="Utrymningsinstruktion.jpg" alt="Utrymningsinstruktion Malmö" width="100%" height="auto">
+                        </div>
+                      </div>
+          
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr class="d-flex">
+                            <th class="col-6">Arbeten med ovanstående risker slutförda den:</th>
+                            <th class="col-6">Signering BAS-U</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="d-flex">
+                            <td class="col-6"><input type="date" id="A"></td>
+                            <td class="col-6"><input type="text" id="A"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+          
+                    </div>
+                  </div>
+
+        <!-- Logotyp i sidan -->
         <div class="col-3" id="logo">
           <div class="sticky-top">
-            <img src="pagen.png" class="img-fluid">
+          <!--  <img src="pagen.png" class="img-fluid"> -->
           </div>
         </div>
-        -->
+        
 
       </div>
     </div>
 
 <footer class="footer text-center">
+  <button class="btn btn-custom" style="margin: 10px;" id="print" onclick="printContent('main');" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+  </svg> Print</button>
+  
+  <!--<button class="btn btn-custom" style="margin: 10px;" onclick={window.print()}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+  </svg>  Skriv ut</button>
+
   <button class="btn btn-custom" style="margin: 10px;" onclick="printDiv('main')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
     <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
     <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
-  </svg> Skriv ut</button>
+  </svg> Skriv ut</button>-->
 </footer>
 
 </body>
@@ -2995,16 +3232,28 @@
   }
 </script>
 
-<!-- För utskriftsknappen -->
+<!-- För utskriftsknappen 
 <script>
   function printDiv(divName) {
-     var printContents = document.getElementById(divName).innerHTML;
-     var originalContents = document.body.innerHTML;
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
 
-     document.body.innerHTML = printContents;
+    document.body.innerHTML = printContents;
 
-     window.print();
+    window.print();
 
-     document.body.innerHTML = originalContents;
+    document.body.innerHTML = originalContents;
   }
-</script>
+</script>-->
+
+<script>
+  function printContent(el){
+  var restorepage = $('body').html();
+  var printcontent = $('#' + el).clone();
+  var enteredtext = $('#text').val();
+  $('body').empty().html(printcontent);
+  window.print();
+  $('body').html(restorepage);
+  $('#text').html(enteredtext);
+  }
+  </script>
